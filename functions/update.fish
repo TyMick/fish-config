@@ -5,4 +5,5 @@ function update
     mas upgrade
     n lts
     yarn --silent global upgrade --latest
+    fisher update
 end
