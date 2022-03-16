@@ -1,0 +1,10 @@
+completions/*
+
+conf.d/*
+!conf.d/aliases.fish
+
+functions/*
+!functions/dev.fish
+!functions/update.fish
+
+fish_variables
