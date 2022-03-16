@@ -10,3 +10,5 @@ functions/*
 !functions/update.fish
 
 fish_variables
+
+.DS_Store
