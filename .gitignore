@@ -5,6 +5,7 @@ conf.d/*
 !conf.d/git.fish
 
 functions/*
+!functions/dev-link.fish
 !functions/dev.fish
 !functions/update.fish
 
