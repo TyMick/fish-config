@@ -6,3 +6,4 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # Use node version in .nvmrc if present in directory hierarchy
 nvm use &>/dev/null || true
+fish_add_path -m /usr/local/bin # prioritizes existing npm
