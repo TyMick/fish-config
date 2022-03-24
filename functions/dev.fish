@@ -5,12 +5,13 @@ function dev
     if string match -rq '^(?<account>[^/ ]+)/(?<repo>[^/ ]+)$' $argv[1]
         set -l workspace_paths ~/code/$account/$repo.code-workspace ~/code/$account/$repo/.vscode/$repo.code-workspace
         for workspace_path in $workspace_paths
-            open $workspace_path
-            return
+            if test -e $workspace_path
+                open $workspace_path
+                return
+            end
         end
 
-        set -l dir_paths ~/code/$account/$repo
-        for dir_path in $dir_paths
+        if test -e ~/code/$account/$repo
             # Parse symlinks so VS Code git integration doesn't get confused
             code (readlink ~/code/$account/$repo || echo ~/code/$account/$repo)
             return
@@ -35,8 +36,10 @@ function dev
     else if string match -rq '^(?<repo>[^/ ]+)$' $argv[1]
         set -l workspace_paths ~/code/*/$repo.code-workspace ~/code/*/$repo/.vscode/$repo.code-workspace
         for workspace_path in $workspace_paths
-            open $workspace_path
-            return
+            if test -e $workspace_path
+                open $workspace_path
+                return
+            end
         end
 
         set -l dir_paths ~/code/*/$repo
