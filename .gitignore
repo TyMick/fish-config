@@ -7,6 +7,7 @@ conf.d/*
 functions/*
 !functions/dev-link.fish
 !functions/dev.fish
+!functions/fprof.fish
 !functions/gmain.fish
 !functions/update.fish
 
