@@ -3,7 +3,7 @@
 # machine, and then opens it in VS Code.
 function dev
     if string match -rq '^(?<account>[^/ ]+)/(?<repo>[^/ ]+)$' $argv[1]
-        set -l workspace_paths ~/code/$account/$repo.code-workspace ~/code/$account/$repo/.vscode/$repo.code-workspace
+        set -l workspace_paths ~/code/$account/$repo.code-workspace ~/code/$account/$repo/$repo.code-workspace ~/code/$account/$repo/.vscode/$repo.code-workspace
         for workspace_path in $workspace_paths
             if test -e $workspace_path
                 open $workspace_path
@@ -34,7 +34,7 @@ function dev
         end
 
     else if string match -rq '^(?<repo>[^/ ]+)$' $argv[1]
-        set -l workspace_paths ~/code/*/$repo.code-workspace ~/code/*/$repo/.vscode/$repo.code-workspace
+        set -l workspace_paths ~/code/*/$repo.code-workspace ~/code/*/$repo/$repo.code-workspace ~/code/*/$repo/.vscode/$repo.code-workspace
         for workspace_path in $workspace_paths
             if test -e $workspace_path
                 open $workspace_path
