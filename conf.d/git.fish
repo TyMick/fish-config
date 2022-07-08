@@ -269,7 +269,7 @@ abbr -a gstd git stash drop
 abbr -a gstl git stash list
 abbr -a gstp git stash pop
 abbr -a gsts git stash show --text
-abbr -a gstu gsta --include-untracked
+abbr -a gstu git stash push --include-untracked
 abbr -a gstall git stash --all
 abbr -a gsu git submodule update
 abbr -a gsw 'git switch'
