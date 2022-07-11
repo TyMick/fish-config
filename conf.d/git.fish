@@ -15,18 +15,6 @@ function work_in_progress
     command git -c log.showSignature=false log -n 1 2>/dev/null | grep -q -- "--wip--" && echo "WIP!!"
 end
 
-# Check if main exists and use instead of master
-function git_main_branch
-    command git rev-parse --git-dir &>/dev/null || return
-    for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk}
-        if command git show-ref -q --verify $ref
-            echo (string split / $ref)[-1]
-            return
-        end
-    end
-    echo master
-end
-
 # Check for develop and similarly named branches
 function git_develop_branch
     command git rev-parse --git-dir &>/dev/null || return
