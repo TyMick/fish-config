@@ -1,5 +1,5 @@
-# abbr -a disable-shadow defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
-# abbr -a enable-shadow defaults write com.apple.screencapture disable-shadow -bool false && killall SystemUIServer
+abbr -a disable-shadow 'defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer'
+abbr -a enable-shadow 'defaults write com.apple.screencapture disable-shadow -bool false && killall SystemUIServer'
 
 abbr -a firefox /Applications/Firefox.app/Contents/MacOS/firefox
 
