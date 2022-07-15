@@ -13,8 +13,8 @@ abbr -a gcmsg! git commit --amend -m
 abbr -a gstaa git stash --all --include-untracked
 
 # double-stash
-# abbr -a gdsta git stash push --keep-index && git stash push && git stash pop 1
-# abbr -a gdstaa git stash --all --include-untracked --keep-index && git stash --all --include-untracked && git stash pop 1
+abbr -a gdsta 'git stash push --keep-index && git stash push'
+abbr -a gdstaa 'git stash --all --include-untracked --keep-index && git stash --all --include-untracked'
 
 abbr -a mmv noglob zmv -W
 
