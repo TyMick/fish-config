@@ -68,7 +68,7 @@ abbr -a gapt git apply --3way
 abbr -a gb git branch
 abbr -a gba git branch -a
 abbr -a gbd git branch -d
-# abbr -a gbda git branch --no-color --merged | command grep -vE "^([+*]|\s*($(git_main_branch)|$(git_develop_branch))\s*$)" | command xargs git branch -d 2>/dev/null
+abbr -a gbda 'git branch --no-color --merged | command grep -vE "^([+*]|\s*($(git_main_branch)|$(git_develop_branch))\s*$)" | command xargs git branch -d 2>/dev/null'
 abbr -a gbD git branch -D
 abbr -a gbl git blame -b -w
 abbr -a gbnm git branch --no-merged
@@ -191,14 +191,14 @@ abbr -a ggpur ggu
 abbr -a ggpull 'git pull origin (git_current_branch)'
 abbr -a ggpush 'git push origin (git_current_branch)'
 
-abbr -a ggsup 'git branch --set-upstream-to=origin/$(git_current_branch)'
-abbr -a gpsup 'git push --set-upstream origin $(git_current_branch)'
+abbr -a ggsup 'git branch --set-upstream-to=origin/(git_current_branch)'
+abbr -a gpsup 'git push --set-upstream origin (git_current_branch)'
 
 abbr -a ghh git help
 
 abbr -a gignore git update-index --assume-unchanged
 # abbr -a gignored git ls-files -v | grep "^[[:lower:]]"
-abbr -a git-svn-dcommit-push 'git svn dcommit && git push github $(git_main_branch):svntrunk'
+abbr -a git-svn-dcommit-push 'git svn dcommit && git push github (git_main_branch):svntrunk'
 
 # abbr -a gk \gitk --all --branches &!
 # abbr -a gke \gitk --all $(git log -g --pretty=%h) &!
