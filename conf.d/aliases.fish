@@ -16,7 +16,8 @@ abbr -a gstaa git stash --all --include-untracked
 abbr -a gdsta 'git stash push --keep-index && git stash push'
 abbr -a gdstu 'git stash --all --include-untracked --keep-index && git stash --all --include-untracked'
 
-abbr -a mmv noglob zmv -W
+# TODO: Find a way to run zmv from fish
+# abbr -a mmv noglob zmv -W
 
 abbr -a pip pip3
 abbr -a python python3
