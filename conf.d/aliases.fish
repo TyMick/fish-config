@@ -14,7 +14,7 @@ abbr -a gstaa git stash --all --include-untracked
 
 # double-stash
 abbr -a gdsta 'git stash push --keep-index && git stash push'
-abbr -a gdstaa 'git stash --all --include-untracked --keep-index && git stash --all --include-untracked'
+abbr -a gdstu 'git stash --all --include-untracked --keep-index && git stash --all --include-untracked'
 
 abbr -a mmv noglob zmv -W
 
