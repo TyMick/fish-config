@@ -10,5 +10,3 @@ if string match -q 'CYGWIN*' -- $os
         /c/Users/ty.mick/scoop/apps/nodejs-lts/current \
         /c/Users/ty.mick/scoop/apps/yarn/current/bin
 end
-
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
