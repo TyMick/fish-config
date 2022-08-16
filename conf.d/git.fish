@@ -258,7 +258,7 @@ abbr -a grs git restore
 abbr -a grset git remote set-url
 abbr -a grss git restore --source
 abbr -a grst git restore --staged
-abbr -a grt 'cd "(git rev-parse --show-toplevel || echo .)"'
+abbr -a grt 'cd (git rev-parse --show-toplevel || echo .)'
 abbr -a gru git reset --
 abbr -a grup git remote update
 abbr -a grv git remote -v
