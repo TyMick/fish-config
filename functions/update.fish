@@ -10,6 +10,6 @@ function update
     brew upgrade
     brew autoremove
     mas upgrade
-    yarn --silent global upgrade --latest
+    pnpm update --global --latest
     fisher update
 end

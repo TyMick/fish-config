@@ -10,3 +10,8 @@ if string match -q 'CYGWIN*' -- $os
         /c/Users/ty.mick/scoop/apps/nodejs-lts/current \
         /c/Users/ty.mick/scoop/apps/yarn/current/bin
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/ty.mick/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
