@@ -310,7 +310,7 @@ abbr -a gama git am --abort
 abbr -a gamscp git am --show-current-patch
 
 function grename
-    if test -z "$argv[1]" || test -z "$argv[2]" ]]
+    if test -z "$argv[1]" || test -z "$argv[2]"
         echo "Usage: $(status current-command) old_branch new_branch"
         return 1
     end
