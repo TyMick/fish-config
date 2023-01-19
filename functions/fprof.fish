@@ -1,5 +1,4 @@
-# Switch Firefox user.js profiles
-function fprof
+function fprof --description "Switch Firefox user.js profiles"
     osascript -e 'quit app "Firefox"'
     cd $firefox_userjs_dir
     git checkout $argv[1]

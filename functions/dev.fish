@@ -1,7 +1,4 @@
-# Opens a local repo in VS Code if it exists on my machine. If it doesn't,
-# searches for the repo on GitHub, forks it if it isn't mine, clones it onto my
-# machine, and then opens it in VS Code.
-function dev
+function dev --description "Open a local repo in VS Code if it exists on my machine. If it doesn't, search for the repo on GitHub, fork it if it isn't mine, clone it onto my machine, and then open it in VS Code."
     set -f path (string split '/' $argv[1])
     set -f repo $path[-1]
     set -f account $path[-2]
