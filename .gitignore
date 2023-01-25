@@ -2,3 +2,4 @@
 fish_variables
 completions/terraform.fish
 functions/ddns.fish
+functions/fish_prompt.fish
