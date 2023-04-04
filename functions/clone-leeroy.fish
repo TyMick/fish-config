@@ -1,3 +1,7 @@
-function clone-leeroy --wraps=clone-leeroy.exe --description 'alias clone-leeroy clone-leeroy.exe'
-    clone-leeroy.exe $argv
+function clone-leeroy --wraps=clone-leeroy
+    if in_windows_directory
+        clone-leeroy.exe $argv
+    else
+        command clone-leeroy $argv
+    end
 end
