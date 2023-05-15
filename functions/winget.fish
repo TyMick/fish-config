@@ -1,3 +1,3 @@
-function winget --wraps=winget.exe --description 'alias winget winget.exe'
+function winget --wraps=winget.exe
     winget.exe $argv
 end
