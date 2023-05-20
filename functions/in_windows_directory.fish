@@ -1,5 +1,8 @@
 function in_windows_directory
-    if string match --quiet --regex '^/mnt/c(/.*)?$' $PWD
+    argparse --max-args 0 -- $argv
+    or return
+
+    if is_windows_directory $PWD
         true
     else
         false
