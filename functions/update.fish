@@ -5,7 +5,8 @@ function update
         git pull --quiet
         cd -
     end
-
+    
+    multiversal_variables
     brew autoremove
     brew upgrade
     brew autoremove
