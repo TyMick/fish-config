@@ -1,4 +1,4 @@
-function is_windows_directory --argument-names path
+function is_windows_path --argument-names path
     argparse --min-args 1 --max-args 1 -- $argv
     or return
 
