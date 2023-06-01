@@ -2,7 +2,7 @@ function in_windows_directory
     argparse --max-args 0 -- $argv
     or return
 
-    if is_windows_path $PWD
+    if string match --quiet --regex '^[A-Z]:\\\\' (wslpath -w $PWD)
         true
     else
         false
