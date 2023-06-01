@@ -11,7 +11,7 @@ function multiversal_variables
     set -Ux HOMEBREW_NO_ANALYTICS 1
     set -Ux NEXT_TELEMETRY_DISABLED 1
     set -Ux N_PRESERVE_NPM 1
-    set -U fisher_path /Users/ty.mick/.config/fisher
+    set -U fisher_path ~/.config/fisher
     set -U github_username TyMick
     set -U my_github_users github.com/TyMick git.faithlife.dev/TyMick
 end
