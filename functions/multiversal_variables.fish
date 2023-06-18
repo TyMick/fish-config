@@ -14,4 +14,6 @@ function multiversal_variables
     set -U fisher_path ~/.config/fisher
     set -U github_username TyMick
     set -U my_github_users github.com/TyMick git.faithlife.dev/TyMick
+
+    echo 'Done.'
 end
