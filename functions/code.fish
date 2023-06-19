@@ -1,4 +1,9 @@
 function code --wraps code-insiders
+    if not command --query wslpath
+        code-insiders $argv
+        return
+    end
+
     for arg in $argv
         set -l transformed_arg (wslpath -w $arg)
         set -f windows_path_args $windows_path_args $transformed_arg
