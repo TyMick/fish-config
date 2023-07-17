@@ -20,7 +20,7 @@ function dev --description "Open a local repo in VS Code if it exists on my mach
     end
     for workspace_path in $workspace_paths
         if test -e $workspace_path
-            open $workspace_path
+            code $workspace_path
             return
         end
     end
