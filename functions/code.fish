@@ -1,6 +1,6 @@
-function code --wraps code-insiders
+function code --wraps code
     if not command --query wslpath
-        code-insiders $argv
+        code $argv
         return
     end
 
@@ -16,12 +16,12 @@ function code --wraps code-insiders
     end
 
     if test "$contains_wsl_paths" = true
-        code-insiders $argv
+        code $argv
     else if test "$contains_windows_paths" = true
-        powershell.exe -Command "code-insiders $windows_path_args"
+        powershell.exe -Command "code $windows_path_args"
     else if in_windows_directory
-        powershell.exe -Command "code-insiders $windows_path_args"
+        powershell.exe -Command "code $windows_path_args"
     else
-        code-insiders $argv
+        code $argv
     end
 end
