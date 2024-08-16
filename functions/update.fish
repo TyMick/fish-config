@@ -7,10 +7,31 @@ function update
     end
     
     multiversal_variables
-    brew autoremove
-    brew upgrade
-    brew autoremove
-    mas upgrade
-    pnpm update --global --latest
+
+    if type --query brew
+        brew autoremove
+        brew upgrade
+        brew autoremove
+    end
+
+    if type --query mas
+        mas upgrade
+    end
+
+    if type --query winget
+        gsudo winget upgrade --all
+    end
+
+    if type --query zypper
+        sudo zypper dist-upgrade --no-confirm
+    end
+
+    if command --query pnpm
+        command pnpm update --global --latest
+    end
+    if type --query pnpm.exe
+        pnpm.exe update --global --latest
+    end
+
     fisher update
 end
