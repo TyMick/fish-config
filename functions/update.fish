@@ -33,5 +33,12 @@ function update
         pnpm.exe update --global --latest
     end
 
+    if command --query gh
+        command gh extension upgrade --all
+    end
+    if type --query gh.exe
+        gh.exe extension upgrade --all
+    end
+
     fisher update
 end
