@@ -58,7 +58,7 @@ function dev --description "Open a local repo in VS Code if it exists on my mach
         end
     end
     cd ~/code/$domain/$account
-    if gh repo fork $domain/$account/$repo --clone=true
+    if gh repo fork $domain/$account/$repo --clone --default-branch-only
         code $repo
         cd -
         return
