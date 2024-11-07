@@ -5,6 +5,6 @@ function copyq --wraps copyq
         printf '%s\n' $output
         return $exit_code
     else
-        copyq $argv
+        command copyq $argv
     end
 end
