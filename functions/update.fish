@@ -18,26 +18,16 @@ function update
         mas upgrade
     end
 
-    if type --query winget
-        gsudo winget upgrade --all
-    end
-
     if type --query zypper
         sudo zypper dist-upgrade --no-confirm
     end
 
-    if command --query pnpm
-        command pnpm update --global --latest
-    end
-    if type --query pnpm.exe
-        pnpm.exe update --global --latest
+    if type --query pnpm
+        pnpm update --global --latest
     end
 
-    if command --query gh
-        command gh extension upgrade --all
-    end
-    if type --query gh.exe
-        gh.exe extension upgrade --all
+    if type --query gh
+        gh extension upgrade --all
     end
 
     fisher update
