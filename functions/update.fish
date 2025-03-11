@@ -31,4 +31,6 @@ function update
     end
 
     fisher update
+
+    exec fish
 end
