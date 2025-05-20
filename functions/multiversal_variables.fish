@@ -5,7 +5,7 @@ function multiversal_variables
     echo 'Setting multiversal variables...'
 
     set -Ux DOTNET_CLI_TELEMETRY_OPTOUT true
-    set -Ux EDITOR 'code-insiders --new-window --wait'
+    set -Ux EDITOR 'code --new-window --wait'
     set -Ux FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT 1
     set -Ux GATSBY_TELEMETRY_DISABLED 1
     set -Ux HOMEBREW_NO_ANALYTICS 1

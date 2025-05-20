@@ -20,7 +20,7 @@ function dev --description "Open a local repo in VS Code if it exists on my mach
     end
     for workspace_path in $workspace_paths
         if test -e $workspace_path
-            code-insiders $workspace_path
+            code $workspace_path
             return
         end
     end
@@ -36,7 +36,7 @@ function dev --description "Open a local repo in VS Code if it exists on my mach
     for dir_path in $dir_paths
         if test -e $dir_path
             # Parse symlinks so VS Code git integration doesn't get confused
-            code-insiders (readlink $dir_path || echo $dir_path)
+            code (readlink $dir_path || echo $dir_path)
             return
         end
     end
@@ -52,14 +52,14 @@ function dev --description "Open a local repo in VS Code if it exists on my mach
     for user in $my_github_users
         if test "$domain/$account" = "$user"
             if gh repo clone $domain/$account/$repo -- ~/code/$domain/$account/$repo
-                code-insiders ~/code/$domain/$account/$repo
+                code ~/code/$domain/$account/$repo
                 return
             end
         end
     end
     cd ~/code/$domain/$account
     if gh repo fork $domain/$account/$repo --clone --default-branch-only
-        code-insiders $repo
+        code $repo
         cd -
         return
     end
